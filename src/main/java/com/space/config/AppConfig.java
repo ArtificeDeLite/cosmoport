@@ -62,6 +62,9 @@ public class AppConfig {
     private Properties additionalProperties() {
         Properties properties = new Properties();
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+        properties.setProperty("spring.datasource.url", "jdbc:mysql://${MYSQL_HOST:localhost}:3306/cosmoport");
+        properties.setProperty("spring.datasource.username", "root");
+        properties.setProperty("spring.datasource.password", "root");
 
         return properties;
     }
